@@ -1,8 +1,8 @@
 class Solution {
-    public static int findHours (int[] arr, double speed) {
+    public static int findHours (int[] arr, int speed) {
         int time = 0;
         for (int i = 0; i < arr.length; i++) {
-            time += Math.ceil(arr[i] / speed);
+            time += Math.ceil((double) arr[i] / speed);
         }
         return time;
     }
