@@ -25,7 +25,7 @@ class Solution {
     }
 
     public int minDays(int[] bloomDay, int m, int k) {
-        if ((long) m * k > bloomDay.length) return -1;
+        if (m > bloomDay.length / k) return -1;
         int[] par = lowHigh(bloomDay);
         int low = par[0], high = par[1];
         while (low <= high) {
