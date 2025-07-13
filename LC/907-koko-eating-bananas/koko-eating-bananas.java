@@ -1,8 +1,8 @@
 class Solution {
-    public static int findHours (int[] arr, int speed) {
-        int time = 0;
+    public static long findHours (int[] arr, int speed) {
+        long time = 0;
         for (int i = 0; i < arr.length; i++) {
-            time += Math.ceil((double) arr[i] / speed);
+            time += (arr[i] + speed - 1) / speed;
         }
         return time;
     }
@@ -18,7 +18,7 @@ class Solution {
         int low = 1, high = Solution.max(piles);
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            int time = findHours(piles, mid);
+            long time = findHours(piles, mid);
             if (time <= h) high = mid - 1;
             else low = mid + 1;
         }
