@@ -42,7 +42,6 @@ public class Solution {
             ptrA = ptrA.next;
             ptrB = ptrB.next;
         }
-        System.gc();
         return ptrA;
     }
 }
