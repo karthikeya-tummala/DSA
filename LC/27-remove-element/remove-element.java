@@ -13,7 +13,8 @@ class Solution {
                 else {
                     j--;
                 }
-            } else {
+            }
+             else {
                 i++;
             }
         }
