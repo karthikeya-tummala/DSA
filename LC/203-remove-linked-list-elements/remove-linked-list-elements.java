@@ -23,6 +23,7 @@ class Solution {
             }
             curr = curr.next;
         }
+        System.gc();
         return dummy.next;
     }
 }
